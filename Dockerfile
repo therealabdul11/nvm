@@ -115,3 +115,4 @@ RUN apt update         && \
     apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"  && \
     apt install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"     \
 
+RUN npm install --prefix "$HOME/.nvm/"
