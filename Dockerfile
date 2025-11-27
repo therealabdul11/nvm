@@ -110,3 +110,8 @@ RUN npm install --prefix "$HOME/.nvm/"
 WORKDIR /home/nvm/.nvm
 
 ENTRYPOINT ["/bin/bash"]
+
+RUN apt update         && \
+    apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"  && \
+    apt install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"     \
+
